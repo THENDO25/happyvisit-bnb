@@ -1,0 +1,30 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\thend\.npmrc
+5 silly config load:file:C:\Users\thend\AppData\Roaming\npm\etc\npmrc
+6 verbose title npm install npm@11.1.0
+7 verbose argv "install" "--global" "npm@11.1.0"
+8 verbose logfile logs-max:10 dir:C:\Users\thend\prodev-mobile-app\UsersthendAppDataLocalnpm-cache\_logs\2025-02-26T15_07_04_033Z-
+9 verbose logfile C:\Users\thend\prodev-mobile-app\UsersthendAppDataLocalnpm-cache\_logs\2025-02-26T15_07_04_033Z-debug-0.log
+10 silly logfile done cleaning log files
+11 http fetch GET 200 https://registry.npmjs.org/npm 623ms (cache miss)
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 silly idealTree buildDeps
+14 silly fetch manifest npm@11.1.0
+15 silly packumentCache full:https://registry.npmjs.org/npm cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/npm 1291ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/npm set size:undefined disposed:false
+18 silly placeDep ROOT npm@11.1.0 OK for:  want: 11.1.0
+19 silly reify moves {}
+20 http cache npm@https://registry.npmjs.org/npm/-/npm-11.1.0.tgz 1ms (cache hit)
+21 silly tarball no local data for npm@https://registry.npmjs.org/npm/-/npm-11.1.0.tgz. Extracting by manifest.
+22 http fetch GET 200 https://registry.npmjs.org/npm/-/npm-11.1.0.tgz 8658ms (cache miss)
+23 silly ADD node_modules/npm
+24 verbose cwd C:\Users\thend\prodev-mobile-app
+25 verbose os Windows_NT 10.0.19045
+26 verbose node v22.14.0
+27 verbose npm  v10.9.2
+28 verbose exit 0
+29 info ok

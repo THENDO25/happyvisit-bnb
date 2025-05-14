@@ -1,0 +1,21 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\thend\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.1.0
+2 info using node@v22.14.0
+3 silly config load:file:C:\Users\thend\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\thend\.npmrc
+5 silly config load:file:C:\Users\thend\AppData\Roaming\npm\etc\npmrc
+6 verbose title npm exec expo run
+7 verbose argv "exec" "--" "expo" "run"
+8 verbose logfile logs-max:10 dir:C:\Users\thend\prodev-mobile-app\UsersthendAppDataLocalnpm-cache\_logs\2025-02-26T15_07_47_702Z-
+9 verbose logfile C:\Users\thend\prodev-mobile-app\UsersthendAppDataLocalnpm-cache\_logs\2025-02-26T15_07_47_702Z-debug-0.log
+10 silly logfile done cleaning log files
+11 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+12 http fetch GET 200 https://registry.npmjs.org/expo 684ms (cache updated)
+13 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+14 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+15 verbose cwd C:\Users\thend\prodev-mobile-app
+16 verbose os Windows_NT 10.0.19045
+17 verbose node v22.14.0
+18 verbose npm  v11.1.0
+19 verbose exit 1
+20 verbose code 1
