@@ -24,7 +24,7 @@ const App = ()=>{
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
         <ImageBackground
-          source={require("@/assets/images/OIP.jpeg")}
+          source={require("@/assets/images/mainbg.jpeg")}
           style={styles.background}
           resizeMode="cover"
         >
