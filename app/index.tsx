@@ -1,7 +1,11 @@
-import { Text, View, StyleSheet, Image, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
+import { Text, View, StyleSheet, Image, ImageBackground, Dimensions, TouchableOpacity,Platform } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { useNavigation } from '@react-navigation/native';
 
+const backgroundImage =
+  Platform.OS === "web"
+    ? { uri: "/tropical.jpg" }
+    : require("../assets/images/tropical.jpg"); 
 
 type RootStackParamList = {
   [x: string]: any;
@@ -25,11 +29,7 @@ const App = () => {
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
 <ImageBackground
-  source={{
-    uri: typeof window !== "undefined"
-      ? "/tropical.jpg" // public folder path
-      : require("./assets/images/tropical.jpg"),
-  }}
+  source={backgroundImage}
   style={styles.background}
   resizeMode="cover"
 >
