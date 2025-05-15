@@ -25,10 +25,14 @@ const App = () => {
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
 <ImageBackground
-          source={require("./assets/images/tropical.jpg")}
-          style={styles.background}
-          resizeMode="cover"
-        >
+  source={{
+    uri: typeof window !== "undefined"
+      ? "/tropical.jpg" // public folder path
+      : require("./assets/images/tropical.jpg"),
+  }}
+  style={styles.background}
+  resizeMode="cover"
+>
           <View style={styles.container}>
             <View style={styles.companyLogo}>
               <Image source={require("@/assets/images/hvlogo1.png")} />
