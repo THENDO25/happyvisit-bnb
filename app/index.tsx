@@ -2,6 +2,7 @@ import { Text, View, StyleSheet, Image, ImageBackground, Dimensions, TouchableOp
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { useNavigation } from '@react-navigation/native';
 
+
 type RootStackParamList = {
   [x: string]: any;
   index: undefined;
@@ -24,7 +25,7 @@ const App = () => {
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
 <ImageBackground
-          source={require("./assets/images/mainbg.jpeg")}
+          source={require("./assets/images/tropical.jpg")}
           style={styles.background}
           resizeMode="cover"
         >
