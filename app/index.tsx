@@ -23,8 +23,8 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
-        <ImageBackground
-          source={{ uri: "/images/mainbg.jpeg" }}
+<ImageBackground
+          source={require("./assets/images/mainbg.jpeg")}
           style={styles.background}
           resizeMode="cover"
         >
