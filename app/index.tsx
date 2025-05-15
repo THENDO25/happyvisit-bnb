@@ -9,7 +9,7 @@ type RootStackParamList = {
   sign: undefined;
 };
 
-const App = ()=>{
+const App = () => {
   const navigation = useNavigation<RootStackParamList>();
 
   const handleJoinPress = () => {
@@ -20,11 +20,11 @@ const App = ()=>{
     navigation.navigate('Sign');
   };
 
-  return(
+  return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
         <ImageBackground
-          source={require("@/assets/images/mainbg.jpeg")}
+          source={{ uri: "/images/mainbg.jpeg" }}
           style={styles.background}
           resizeMode="cover"
         >
@@ -50,9 +50,9 @@ const App = ()=>{
                 </TouchableOpacity>
               </View>
               <TouchableOpacity onPress={() => navigation.navigate("(home)")}>
-              <View style={{ alignItems: "center", paddingVertical: 20 }}>
-                <Text style={{ color: "white" }}>Continue to home</Text>
-              </View>
+                <View style={{ alignItems: "center", paddingVertical: 20 }}>
+                  <Text style={{ color: "white" }}>Continue to home</Text>
+                </View>
               </TouchableOpacity>
             </View>
           </View>
