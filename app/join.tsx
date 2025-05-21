@@ -1,9 +1,9 @@
 import { Text, TextInput, View, TouchableOpacity, Image } from "react-native";
-import { styles } from "@/styles/joinstyle";
+import { styles } from "../styles/joinstyle"; // Adjust if needed
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import React from 'react';
-import { useNavigation } from '@react-navigation/native';
+import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Join() {
   const navigation = useNavigation();
@@ -15,30 +15,38 @@ export default function Join() {
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <Ionicons name="arrow-back" size={25} color="black" />
           </TouchableOpacity>
-<Image source={require('@/assets/images/hvlogo1.png')} />
+
+          <Image
+            source={require("../assets/images/hvlogo1.png")}
+            style={{ width: 50, height: 50, resizeMode: "contain" }}
+          />
         </View>
+
         <Text style={styles.titleText}>Create an account</Text>
-        <Text style={styles.subText}>
-          Register your account with us.
-        </Text>
+        <Text style={styles.subText}>Register your account with us.</Text>
 
         <View style={styles.formGroup}>
           <Text style={styles.formLabel}>Email</Text>
           <TextInput keyboardType="email-address" style={styles.formControl} />
+
           <Text style={styles.formLabel}>Password</Text>
           <View style={styles.formPasswordControl}>
-            <TextInput style={styles.passwordControl} />
+            <TextInput style={styles.passwordControl} secureTextEntry />
             <Ionicons name="eye-off" size={24} color="#7E7B7B" />
           </View>
+
           <Text style={styles.formLabel}>Confirm Password</Text>
           <View style={styles.formPasswordControl}>
-            <TextInput style={styles.passwordControl} />
+            <TextInput style={styles.passwordControl} secureTextEntry />
             <Ionicons name="eye-off" size={24} color="#7E7B7B" />
           </View>
         </View>
 
-        <TouchableOpacity style={styles.primaryButton} onPress={() => navigation.navigate("Sign" as never)}>
-          <Text style={styles.buttonText}>join now</Text>
+        <TouchableOpacity
+          style={styles.primaryButton}
+          onPress={() => navigation.navigate("Sign" as never)}
+        >
+          <Text style={styles.buttonText}>Join now</Text>
         </TouchableOpacity>
 
         <View style={styles.dividerGroup}>
@@ -50,14 +58,20 @@ export default function Join() {
         <View style={styles.secondaryButtonGroup}>
           <TouchableOpacity style={styles.secondaryButton}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <Image source={require("@/assets/images/google.png")} />
+              <Image
+                source={require("../assets/images/google.png")}
+                style={{ width: 24, height: 24, marginRight: 10 }}
+              />
               <Text style={styles.secondaryButtonText}>Continue with Google</Text>
             </View>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.secondaryButton}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <Image source={require("@/assets/images/facebook.png")} />
+              <Image
+                source={require("../assets/images/facebook.png")}
+                style={{ width: 24, height: 24, marginRight: 10 }}
+              />
               <Text style={styles.secondaryButtonText}>Continue with Facebook</Text>
             </View>
           </TouchableOpacity>
