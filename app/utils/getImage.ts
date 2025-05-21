@@ -1,7 +1,6 @@
+
 import { Platform } from "react-native";
 
-export function getImage(webPath: string, nativePath: any) {
-  return Platform.OS === "web"
-    ? { uri: webPath } 
-    : nativePath;     
-}
+export const getImage = (webPath: string, nativeImage: any) => {
+  return Platform.OS === "web" ? { uri: webPath } : nativeImage;
+};

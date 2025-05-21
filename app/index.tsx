@@ -11,7 +11,7 @@ import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
 import { getImage } from "./utils/getImage"; // make sure this path is correct
 
-const backgroundImage = getImage("/tropical.jpg", require("@/assets/images/tropical.jpg"));
+const backgroundImage = getImage("/mainbg.jpeg", require("@/assets/images/tropical.jpg"));
 const logoImage = getImage("/hvlogo1.png", require("@/assets/images/hvlogo1.png"));
 
 type RootStackParamList = {
