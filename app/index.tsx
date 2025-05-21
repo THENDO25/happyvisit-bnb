@@ -1,7 +1,18 @@
-import { Text, View, StyleSheet, Image, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  ImageBackground,
+  Dimensions,
+  TouchableOpacity,
+} from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
+import { getImage } from "./utils/getImage"; // make sure this path is correct
 
+const backgroundImage = getImage("/tropical.jpg", require("@/assets/images/tropical.jpg"));
+const logoImage = getImage("/hvlogo1.png", require("@/assets/images/hvlogo1.png"));
 
 type RootStackParamList = {
   [x: string]: any;
@@ -13,44 +24,32 @@ type RootStackParamList = {
 const App = () => {
   const navigation = useNavigation<RootStackParamList>();
 
-  const handleJoinPress = () => {
-    navigation.navigate('join');
-  };
-
-  const handleSignPress = () => {
-    navigation.navigate('Sign');
-  };
-
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
-<ImageBackground
-  source={{
-    uri: typeof window !== "undefined"
-      ? "/tropical.jpg" // public folder path
-      : require("./assets/images/tropical.jpg"),
-  }}
-  style={styles.background}
-  resizeMode="cover"
->
+        <ImageBackground
+          source={backgroundImage}
+          style={styles.background}
+          resizeMode="cover"
+        >
           <View style={styles.container}>
             <View style={styles.companyLogo}>
-              <Image source={require("@/assets/images/hvlogo1.png")} />
+              <Image source={logoImage} style={{ width: 100, height: 100, resizeMode: "contain" }} />
             </View>
 
             <View style={styles.textGroup}>
               <Text style={styles.textLarge}>Find your favorite place here</Text>
-              <Text style={styles.textSmall}>The best prices for over 2 </Text>
+              <Text style={styles.textSmall}>The best prices for over 2</Text>
               <Text style={styles.textSmall}>million properties worldwide</Text>
             </View>
 
             <View style={{ position: "absolute", bottom: 0, width: "100%" }}>
               <View style={styles.buttonGroup}>
-                <TouchableOpacity style={styles.button} onPress={handleJoinPress}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("join")}>
                   <Text style={{ ...styles.textSmall, color: "black" }}>Join here</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.transparentButton} onPress={handleSignPress}>
+                <TouchableOpacity style={styles.transparentButton} onPress={() => navigation.navigate("Sign")}>
                   <Text style={styles.textSmall}>Sign In</Text>
                 </TouchableOpacity>
               </View>
@@ -65,8 +64,7 @@ const App = () => {
       </SafeAreaView>
     </SafeAreaProvider>
   );
-}
-
+};
 
 const styles = StyleSheet.create({
   container: {
